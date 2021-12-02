@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lnyHader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_close" />
+
+        <com.keyroom.CutomeView.PoppinsmediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgClose"
+            android:padding="@dimen/_5sdp"
+            android:text="Filters"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.keyroom.CutomeView.PoppinsmediumTextView
+            android:id="@+id/txtResetAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="RESET ALL"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llAddFilterLayout"
+        android:layout_below="@+id/lnyHader"
+        android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyAddFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lnyLayout"
+        android:layout_below="@+id/llAddFilterLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/fliterBack_color"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnyFilterPriceClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fliterBack_color"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.keyroom.CutomeView.PoppinsmediumTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:drawableLeft="@drawable/filter_price"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Filter Price"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgFilterPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/down_arrow" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnyMinMaxPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <com.keyroom.CutomeView.PoppinsmediumTextView
+                        android:id="@+id/txtMinPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="MinPrice"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - "
+                        android:textColor="@color/colorBlue"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumTextView
+                        android:id="@+id/txtMaxPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="MaxPrice"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <com.keyroom.RangBarSeek.RangeSeekBar
+                    android:id="@+id/seekPriceRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:visibility="visible"
+                    app:rsb_gravity="center"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/colorBlue" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/fliterBack_color"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnyHotelStarClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fliterBack_color"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.keyroom.CutomeView.PoppinsmediumTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:drawableLeft="@drawable/hotel_star"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Hotel Star"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgHotelStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/down_arrow" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnyHotelStar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chekFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false" />
+
+                        <uz.jamshid.library.ExactRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:isIndicator="true"
+                            app:starCount="5"
+                            app:starFillColor="@color/colorBlue"
+                            app:starSize="25"
+                            app:starValue="5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chekFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false" />
+
+                        <uz.jamshid.library.ExactRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:isIndicator="true"
+                            app:starCount="4"
+                            app:starFillColor="@color/colorBlue"
+                            app:starSize="25"
+                            app:starValue="4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chekThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false" />
+
+                        <uz.jamshid.library.ExactRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:isIndicator="true"
+                            app:starCount="3"
+                            app:starFillColor="@color/colorBlue"
+                            app:starSize="25"
+                            app:starValue="3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chekTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false" />
+
+                        <uz.jamshid.library.ExactRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:isIndicator="false"
+                            app:starCount="2"
+                            app:starFillColor="@color/colorBlue"
+                            app:starSize="25"
+                            app:starValue="2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chekOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorBlue"
+                            android:checked="false" />
+
+                        <uz.jamshid.library.ExactRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:isIndicator="false"
+                            app:starCount="1"
+                            app:starFillColor="@color/colorBlue"
+                            app:starSize="25"
+                            app:starValue="1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+              <!--  <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/fliterBack_color"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnyPropertyTypeClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fliterBack_color"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.keyroom.CutomeView.PoppinsmediumTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/property_type"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Property type"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgPropertyType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/down_arrow" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnyPropertyType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyPropertyType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/fliterBack_color"
+                    app:cardElevation="@dimen/_2sdp"
+                    android:visibility="gone"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnyFacilitiesClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fliterBack_color"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.keyroom.CutomeView.PoppinsmediumTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/facilities"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Facilities"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgFacilities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/down_arrow" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnyFacilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyFacilities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/fliterBack_color"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/lnyHotelServiceClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fliterBack_color"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <com.keyroom.CutomeView.PoppinsmediumTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:drawableLeft="@drawable/hotel_service"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Hotel Service"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgHotelService"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:rotation="180"
+                            android:src="@drawable/down_arrow" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lnyHotelService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyHotelService"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/lnyLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/txtApplyFilters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_45sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="Apply Filters"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/color_main"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lnyHader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/rate_us_write_review"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cardView"
+        android:layout_below="@id/lnyHader">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lnyMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/edtTitle"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:hint="Title"
+                        android:background="@drawable/btn_view_white"
+                        android:textSize="@dimen/_13sdp" />
+
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/edtContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/btn_view_white"
+                        android:gravity="top"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:maxLines="1"
+                        android:padding="@dimen/_8sdp"
+                        android:hint="Review content"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        >
+                    <LinearLayout
+                        android:id="@+id/lnyHotelStar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtService"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Service"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                                />
+
+                            <RatingBar
+                                android:id="@+id/erbService"
+                                android:scaleX=".7"
+                                android:scaleY=".7"
+                                android:transformPivotX="0dp"
+                                android:transformPivotY="0dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:numStars="5"
+                                android:progressBackgroundTint="#DAC8C7C7"
+                                android:progressTint="@color/colorYellow"
+                                android:saveEnabled="true" />
+
+                            <!--  <uz.jamshid.library.ExactRatingBar
+                                  android:id="@+id/erbService"
+                                  android:layout_marginTop="@dimen/_5sdp"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  app:isIndicator="false"
+                                  app:starCount="5"
+                                  app:starFillColor="@color/colorEditext"
+                                  app:starSize="45"
+                                  app:starValue="0" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtOrganization"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Organization"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                                />
+
+                            <RatingBar
+                                android:id="@+id/erbOrganization"
+                                style="?android:attr/ratingBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:scaleX=".7"
+                                android:scaleY=".7"
+                                android:transformPivotX="0dp"
+                                android:transformPivotY="0dp"
+
+                                android:numStars="5"
+                                android:progressBackgroundTint="#DAC8C7C7"
+                                android:progressTint="@color/colorYellow"
+                                android:saveEnabled="true" />
+
+                            <!--<uz.jamshid.library.ExactRatingBar
+                                android:id="@+id/erbOrganization"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:isIndicator="false"
+                                app:starCount="5"
+                                app:starFillColor="@color/colorEditext"
+                                app:starSize="45"
+                                app:starValue="0" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtFriendliness"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Friendliness"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                              />
+
+                            <RatingBar
+                                android:id="@+id/erbFriendliness"
+                                style="?android:attr/ratingBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:numStars="5"
+                                android:scaleX=".7"
+                                android:scaleY=".7"
+                                android:transformPivotX="0dp"
+                                android:transformPivotY="0dp"
+
+                                android:progressBackgroundTint="#DAC8C7C7"
+                                android:progressTint="@color/colorYellow"
+                                android:saveEnabled="true" />
+                            <!--  <uz.jamshid.library.ExactRatingBar
+                                  android:id="@+id/erbFriendliness"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/_5sdp"
+                                  app:isIndicator="false"
+                                  app:starCount="5"
+                                  app:starFillColor="@color/colorEditext"
+                                  app:starSize="45"
+                                  app:starValue="0" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtLocation"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Location"
+                                android:fontFamily="@font/montserrat"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                        />
+
+                            <RatingBar
+                                android:id="@+id/erbLocation"
+                                style="?android:attr/ratingBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:numStars="5"
+                                android:scaleX=".7"
+                                android:scaleY=".7"
+                                android:transformPivotX="0dp"
+                                android:transformPivotY="0dp"
+                                android:progressBackgroundTint="#DAC8C7C7"
+                                android:progressTint="@color/colorYellow"
+                                android:saveEnabled="true" />
+                            <!--
+                                                        <uz.jamshid.library.ExactRatingBar
+                                                            android:id="@+id/erbLocation"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="@dimen/_5sdp"
+                                                            app:isIndicator="false"
+                                                            app:starCount="5"
+                                                            app:starFillColor="@color/colorEditext"
+                                                            app:starSize="45"
+                                                            app:starValue="0" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtSafety"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Safety"
+                                android:maxLines="1"
+                                android:fontFamily="@font/montserrat"
+                                android:layout_weight="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                              />
+
+                            <RatingBar
+                                android:id="@+id/erbSafety"
+                                style="?android:attr/ratingBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:numStars="5"
+                                android:scaleX=".7"
+                                android:scaleY=".7"
+                                android:transformPivotX="0dp"
+                                android:transformPivotY="0dp"
+
+                                android:progressBackgroundTint="#DAC8C7C7"
+                                android:progressTint="@color/colorYellow"
+                                android:saveEnabled="true" />
+                            <!--   <uz.jamshid.library.ExactRatingBar
+                                   android:id="@+id/erbSafety"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginTop="@dimen/_5sdp"
+                                   app:isIndicator="false"
+                                   app:starCount="5"
+                                   app:starFillColor="@color/colorEditext"
+                                   app:starSize="45"
+                                   app:starValue="0" />-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/fliterBack_color"
+        app:cardElevation="@dimen/_1sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txtLeaveReview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_45sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Leave a Review"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="false"
+        android:indeterminateTint="@color/colorYellow"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+</RelativeLayout>

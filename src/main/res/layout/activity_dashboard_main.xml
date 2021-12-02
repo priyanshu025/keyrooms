@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_main"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center"
+                        android:text="KEYROOMS"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.miguelcatalan.materialsearchview.MaterialSearchView
+                android:id="@+id/materialsearchview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lnyToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_search"
+                android:hint="Search for hotel, City or location"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="@color/colorLoginFont"
+                android:textColorHint="@color/colorEditext"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgbackBooking"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back" />
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Bookings"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/_15sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relWishList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:orientation="horizontal"
+
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgBackWishlist"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back" />
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Wishlist"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/_15sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40sdp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fitsSystemWindows="true"
+                app:itemBackground="@color/colorWhite"
+                app:itemIconTint="@drawable/bottom_navigation_color_selector"
+                app:itemTextColor="@drawable/bottom_navigation_color_selector"
+                app:labelVisibilityMode="labeled"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                app:menu="@menu/item_bottom_menu" />
+        </RelativeLayout>
+    </LinearLayout>
+<!--
+    <LinearLayout
+        android:id="@+id/lnyDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnyUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/avtar_new" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.keyroom.CutomeView.PoppinsboldTextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Hi, UserName"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_16sdp" />
+
+                <com.keyroom.CutomeView.PoppinslightTexttView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Email"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice" />
+    </LinearLayout>-->
+
+
+</RelativeLayout>

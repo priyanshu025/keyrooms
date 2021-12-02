@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_135sdp"
+        android:background="@color/color_main"
+         />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/_76sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/login_logo_new" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_gravity="center_horizontal"
+            android:text="Phone Verification"
+            android:textColor="@color/colorLoginFont"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                <TextView
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="@drawable/background_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your OTP code here"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/et1"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/rounded_corner_phoneeditext"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorLoginFont"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Space
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="match_parent" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/et2"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/rounded_corner_phoneeditext"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorLoginFont"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Space
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="match_parent" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/et3"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/rounded_corner_phoneeditext"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorLoginFont"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Space
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="match_parent" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumEditext
+                        android:id="@+id/et4"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/rounded_corner_phoneeditext"
+                        android:inputType="phone"
+                        android:maxLength="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorLoginFont"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Space
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:text="Don't received any code?"
+                        android:textAlignment="center"
+                        android:textColor="#002840"
+                        android:fontFamily="@font/montserrat_semibold"
+
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#000"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resend a new code."
+                        android:id="@+id/txt_resend"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/dot_color"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_above="@id/txtVerify"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/otpimage"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/txtVerify"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="Confirm"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="false"
+                android:indeterminateTint="@color/colorYellow"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

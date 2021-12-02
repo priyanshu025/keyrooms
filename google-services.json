@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "235050266283",
+    "firebase_url": "https://keyroom-f11f3.firebaseio.com",
+    "project_id": "keyroom-f11f3",
+    "storage_bucket": "keyroom-f11f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235050266283:android:b8240cb4ff6c30d9a691ee",
+        "android_client_info": {
+          "package_name": "com.keyroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235050266283-kviad155bd5t90oj5hbr9erp9oqt6q9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgxKuLHo2jxID8yt4H19ky24sJrRTjWBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235050266283-kviad155bd5t90oj5hbr9erp9oqt6q9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

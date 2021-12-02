@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/login_logo_new" />
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Sign Up"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:textSize="@dimen/_20sdp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/login_user"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:hint="First Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/login_user"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:hint="Last Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_marginTop="@dimen/_15sdp"
+            android:id="@+id/txtSingUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/ic_btn_background"
+            android:backgroundTint="@color/colorBlue"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="SIGN UP"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_11sdp"
+            />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_backgroud"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:id="@+id/bottom_sheet"
+        >
+        <LinearLayout
+            android:id="@+id/bottomSheet_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_sheet_backgroud"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Enter your OTP code here"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.keyroom.CutomeView.PoppinsmediumEditext
+                    android:id="@+id/et1"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corner_phoneeditext"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="match_parent" />
+
+                <com.keyroom.CutomeView.PoppinsmediumEditext
+                    android:id="@+id/et2"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corner_phoneeditext"
+                    android:inputType="phone"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="match_parent" />
+
+                <com.keyroom.CutomeView.PoppinsmediumEditext
+                    android:id="@+id/et3"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corner_phoneeditext"
+                    android:inputType="phone"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="match_parent" />
+
+                <com.keyroom.CutomeView.PoppinsmediumEditext
+                    android:id="@+id/et4"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corner_phoneeditext"
+                    android:inputType="phone"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLoginFont"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Don't received any code?"
+                android:textAlignment="center"
+                android:textColor="#002840"
+                android:textSize="16sp"
+                android:textStyle="normal"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="#000" />
+
+            <TextView
+                android:id="@+id/txt_resend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Resend a new code."
+                android:textAlignment="center"
+                android:textColor="@color/dot_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/txtVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/btn_blue"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

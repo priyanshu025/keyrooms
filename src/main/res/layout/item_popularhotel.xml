@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cardViewMain"
+    android:layout_width="@dimen/_140sdp"
+    card_view:cardElevation="0dp"
+    app:cardElevation="0.5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/imgHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:scaleType="fitXY"
+                     />
+
+                <TextView
+                    android:id="@+id/imgSoldOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/round_right_top_bottom_background"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="SOLD OUT"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:visibility="visible"
+                    android:id="@+id/imgWish"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/imgHotel"
+                    android:src="@drawable/wish_icon" />
+
+                <ImageView
+                    android:id="@+id/imgUnWish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/imgHotel"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/wish_fill_icon"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_background"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:layout_marginTop="-15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textSize="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/colorBlack"
+                />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:src="@drawable/ic_star"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           android:padding="@dimen/_7sdp">
+
+            <TextView
+                android:id="@+id/txthotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/txtHotelAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/colorCity"
+                android:textSize="@dimen/_7sdp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_9sdp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txtSalePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorEditext"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorLightBlack"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtSalePrice"
+                        app:layout_constraintEnd_toEndOf="@+id/txtSalePrice"
+                        app:layout_constraintStart_toStartOf="@+id/txtSalePrice"
+                        app:layout_constraintTop_toTopOf="@+id/txtSalePrice" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

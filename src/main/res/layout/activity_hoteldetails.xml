@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blur">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_back_icon"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgUnWish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_35sdp"
+                        android:src="@drawable/ic_un_wish_icon" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imgWish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_35sdp"
+                        android:src="@drawable/ic_wishlist_icon"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgShare"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_share" />
+                </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/txthotelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:id="@+id/txtHotelAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:maxLines="2"
+                    android:textColor="@color/colorCity"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/rate"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/star" />
+
+                    <com.keyroom.CutomeView.PoppinsmediumTextView
+                        android:id="@+id/txtHotelRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <com.keyroom.CutomeView.PoppinsmediumTextView
+                        android:id="@+id/txtTotalReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11sdp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/locate_in_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="View on Map"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Date of travel &amp; guests"
+                    android:textColor="#002840"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <LinearLayout
+                    android:id="@+id/lnyBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearHoteldetailLayout"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/llGuest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Guest"
+                            android:textColor="@color/dot_color" />
+
+                        <TextView
+                            android:id="@+id/txtGuestAndRoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llcheckIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Check In"
+                            android:textColor="@color/dot_color" />
+
+                        <TextView
+                            android:id="@+id/txtCheckInDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llcheckOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Check Out"
+                            android:textColor="@color/dot_color" />
+
+                        <TextView
+                            android:id="@+id/txtCheckOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_semibold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Amenties"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/facilitiesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="100% Safe Place to Stay"
+                    android:textColor="#A4C422"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="Best-in-class measures for your safe key"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/check_box"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Free cancellation" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/check_box"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Couple Friendly" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/check_box"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Pay at Hotel" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Description"
+                android:textColor="#002840"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/txtDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                app:colorClickableText="@color/colorAccent"
+                app:trimCollapsedText="show less"
+                app:trimExpandedText="Show more"
+                app:trimLength="200"
+                app:trimMode="trimModeLength" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:padding="@dimen/_5sdp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:clipToPadding="false"
+                    android:foregroundGravity="center"
+                    android:overScrollMode="ifContentScrolls" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:text="Similar Hotel Near by"
+                android:textColor="#002840"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nearByHotelRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+
+
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Room Category"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyRoomDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Privacy &amp; policy"
+                android:textColor="#002840"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/policyRecyelerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Review"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/review_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sale_Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="end"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorBlack"
+                            app:layout_constraintBottom_toBottomOf="@+id/sale_Price"
+                            app:layout_constraintEnd_toEndOf="@+id/sale_Price"
+                            app:layout_constraintStart_toStartOf="@+id/sale_Price"
+                            app:layout_constraintTop_toTopOf="@+id/sale_Price" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/txtBookNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/btn_blue"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Book Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>
+
+

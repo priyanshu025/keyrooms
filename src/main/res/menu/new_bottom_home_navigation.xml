@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_home"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:title="Home"/>
+    <item
+        android:id="@+id/bottom_wallet"
+        android:enabled="true"
+        android:icon="@drawable/wallet_icon"
+        android:title="Wallet"/>
+    <item
+        android:id="@+id/bottom_booking"
+        android:enabled="true"
+        android:icon="@drawable/book_icon"
+        android:title="Booking"/>
+    <item
+        android:id="@+id/bottom_wishlist"
+        android:enabled="true"
+        android:icon="@drawable/wishlist_icon"
+        android:title="WishList"/>
+
+    <item
+        android:id="@+id/user_profile"
+        android:enabled="true"
+        android:icon="@drawable/user_icon"
+        android:title="Profile"/>
+</menu>

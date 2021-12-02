@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blur"
+    tools:context=".Activity.PartyHallDetailsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtEnquiry"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcyGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_icon"
+                    />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/txthotelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_16sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/colorLightBlack" />
+
+                <TextView
+                    android:id="@+id/txtHotelAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:maxLines="2"
+                    android:textColor="@color/colorCity"
+                    android:textSize="@dimen/_11sdp" />
+
+
+                <TextView
+                    android:id="@+id/locate_in_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/location_icon"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="#0FA0B2"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center_vertical"
+                    android:text="View on Map"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="100% Safe Place to Stay"
+                        android:textColor="#A4C422"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center_horizontal"
+                        android:text="Best-in-class measures for your safe key"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/check_box"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Free cancellation" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/check_box"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Couple Friendly" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/check_box"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Pay at Hotel" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Description"
+                    android:textColor="#002840"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/txtDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_11sdp"
+                    app:colorClickableText="@color/colorAccent"
+                    app:trimCollapsedText="show less"
+                    app:trimExpandedText="Show more"
+                    app:trimLength="200"
+                    app:trimMode="trimModeLength" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelasio_bold"
+                    android:text="Privacy &amp; policy"
+                    android:textColor="#002840"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/txtPolicy"
+                    android:textSize="@dimen/_11sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/txtEnquiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/btn_blue"
+        android:fontFamily="@font/montserrat_semibold"
+        android:padding="@dimen/_6sdp"
+        android:text="Enquiry Now"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

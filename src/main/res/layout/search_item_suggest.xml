@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <TextView
+    android:padding="@dimen/_6sdp"
+        android:id="@+id/text"
+        android:drawableRight="@drawable/ic_right"
+        android:drawableLeft="@drawable/ic_history"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="sjkfnsnjkdcnjk"
+        android:textSize="@dimen/_11sdp" />
+
+
+</LinearLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnyHotelDetils"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorSidebar"
+        app:cardCornerRadius="@dimen/_0.5sdp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:background="@drawable/gray_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lnyHader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/txtRoom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_bold"
+                android:layout_centerInParent="true"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                app:fontFamily="@font/montserrat"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorEditext"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13sdp"
+                android:text="Room 1"/>
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/txtGuest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_bold"
+                android:layout_centerInParent="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                app:fontFamily="@font/montserrat"
+                android:gravity="right"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorEditext"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13sdp"
+                android:text="1 Guest"/>
+
+            <ImageView
+                android:id="@+id/imgArrow"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorLine" />
+        <LinearLayout
+            android:id="@+id/llmiddleOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="@dimen/_5sdp">
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/textAdult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/montserrat"
+                android:layout_weight="0.37"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorEditext"
+                android:textSize="@dimen/_13sdp"
+                android:text="Adult"/>
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/imgLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:background="@drawable/left_corner_yellow"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="-"/>
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/textAdultNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                app:fontFamily="@font/montserrat"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorEditext"
+                android:textSize="@dimen/_13sdp"
+                android:background="@drawable/gray_line_without_corner"
+                android:text="1"/>
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/imgRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:background="@drawable/right_corner_yellow"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="+"/>
+        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/colorLine" />
+
+            <LinearLayout
+            android:id="@+id/llmiddle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="@dimen/_5sdp">
+
+            <com.keyroom.CutomeView.PoppinsmediumTextView
+                android:id="@+id/textinput_helper_text"
+                android:layout_width="0dp"
+                app:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.9"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorEditext"
+                android:textSize="@dimen/_11sdp"
+                android:text="Travelling with chindren? (0-5 years)"/>
+
+            <CheckBox
+                android:id="@+id/chkChildren"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_weight="0.1"/>
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llChildren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/children"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"/>
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Children "/>
+
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:id="@+id/imgLeftChildren"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:background="@drawable/left_corner_children"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="-"/>
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:id="@+id/textChildrenNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorEditext"
+                    android:background="@drawable/yellow_line_without_corner"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="1"/>
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:id="@+id/imgRightChildren"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:background="@drawable/right_corner_children"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="+"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/colorLine" />
+            <LinearLayout
+                android:id="@+id/llfooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:id="@+id/btnRemove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="Delete Room"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="1dp"
+                    android:background="@color/colorLine" />
+
+                <com.keyroom.CutomeView.PoppinsmediumTextView
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    app:fontFamily="@font/montserrat_semibold"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="Add Room"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

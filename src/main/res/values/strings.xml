@@ -1,0 +1,71 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Keyrooms</string>
+    <string name="mapKey">AIzaSyD_g35jbynKkScHISVgatt3YV-PW4NXDTE</string>
+    <string name="partnerKey">QUfjbad0864a44de84bc4a4e1f0a2446f5988</string>
+
+    <string name="fordate">For dates &amp; guests</string>
+    <string name="policies">Policies &amp; House Rules</string>
+    <string name="prompt">0 Room</string>
+    <string name="facebook_app_id">995199064342753</string>
+
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+
+
+    <string name="mdtp_done_label">Done</string>
+    <string name="mdtp_ok">@android:string/ok</string>
+    <string name="mdtp_cancel">@android:string/cancel</string>
+    <string name="mdtp_day_picker_description">Month grid of days</string>
+    <string name="mdtp_select_day">Select month and day</string>
+    <string name="mdtp_year_picker_description">Year list</string>
+    <string name="mdtp_select_year">Select year</string>
+    <string name="mdtp_sans_serif" translatable="false">sans-serif</string>
+    <string name="mdtp_radial_numbers_typeface" translatable="false">sans-serif</string>
+    <string name="mdtp_time_placeholder" translatable="false">00</string>
+    <string name="mdtp_time_separator" translatable="false">:</string>
+    <string name="mdtp_hour_picker_description">Hours circular slider</string>
+    <string name="mdtp_select_hours">Select hours</string>
+    <string name="mdtp_minute_picker_description">Minutes circular slider</string>
+    <string name="mdtp_select_minutes">Select minutes</string>
+    <string name="mdtp_second_picker_description">Seconds circular slider</string>
+    <string name="mdtp_select_seconds">Select seconds</string>
+    <string name="mdtp_deleted_key"><xliff:g example="4" id="key">%1$s</xliff:g> deleted</string>
+    <string name="mdtp_day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="mdtp_date_v1_monthyear">MMMM yyyy</string>
+    <string name="mdtp_item_is_selected"><xliff:g example="2013" id="item">%1$s</xliff:g> selected</string>
+
+
+    <string name="time_ago_prefix"></string>
+    <string name="time_ago_suffix">ago</string>
+    <string name="time_ago_seconds">a min</string>
+    <string name="time_ago_minute">a min</string>
+    <string name="time_ago_minutes">a min</string>
+    <string name="time_ago_hour">an hour</string>
+    <string name="time_ago_hours">hours</string>
+    <string name="time_ago_day">a day</string>
+    <string name="time_ago_days">%d days</string>
+    <string name="time_ago_month">a month</string>
+    <string name="time_ago_months">%d months</string>
+    <string name="time_ago_year">a year</string>
+    <string name="time_ago_years">%d years</string>
+    <string name="hour_ago">%s hour ago</string>
+    <string name="hours_ago">%s hours ago</string>
+    <string name="just_now_ago">Just now</string>
+    <string name="minute_ago">%s minute ago</string>
+    <string name="minutes_ago">%s minutes ago</string>
+    <string name="week_ago">%s week ago </string>
+    <string name="weeks_ago">%s weeks ago </string>
+    <string name="yesterday">yesterday</string>
+    <string name="days_ago">%s days ago</string>
+    <string name="rate_us_write_review"><![CDATA[Rate us & Write review]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

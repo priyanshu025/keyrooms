@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.keyroom">
+
+    <uses-sdk tools:overrideLibrary="com.truecaller.android.sdk" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+
+
+    <application
+        android:name=".Activity.KeyRooms"
+        android:allowBackup="true"
+        android:fullBackupOnly="false"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".Activity.LoginWithTrueCaller"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.CityLocationsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Activity.HotelDiscountedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MoreOffersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SeeAllPartyHallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SeeAllBanquetsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PartyHallDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchHotelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BanquetsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HelpAndSupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OnboardActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".Activity.OtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SingUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".Activity.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CityNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HotelDetailsActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="keyrooms.in"
+                    android:pathPrefix="/hotel"
+                    android:scheme="https" />
+                <data
+                    android:host="keyrooms.in"
+                    android:pathPrefix="/hotel"
+                    android:scheme="http" />
+                <data
+                    android:host="keyrooms.in"
+                    android:pathPrefix="/hotel"
+                    android:scheme="app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="keyroomsapp.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SeeAllPopularHotelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SeeAllNearByHotelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChekInCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BookingetailsAndUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DoCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UserInformationAfterCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RateUsAndWriteReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HotelDetailsImageViewActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mapKey" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/keyroom_logo" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!--
+   <service
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        -->
+        <service android:name=".FcmMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="07wtk21ec2941f55446a88d752a340bf3a130" />
+    </application>
+
+</manifest>

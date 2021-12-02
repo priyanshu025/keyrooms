@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.NotificationActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/color_main"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        >
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_6sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/total_notify"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0 New Notification"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:text="Clear"
+
+                android:textColor="@color/colorBlack"
+
+
+                />
+        </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notification_Recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>

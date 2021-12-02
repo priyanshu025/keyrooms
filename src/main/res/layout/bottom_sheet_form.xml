@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_30sdp"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter your name"
+        android:padding="@dimen/_10sdp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter Phone no"
+        android:padding="@dimen/_10sdp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter Email"
+        android:padding="@dimen/_10sdp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/purpose"
+        android:hint="Purpose for booking"
+        android:fontFamily="@font/montserrat"
+        android:padding="@dimen/_10sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guest"
+        android:fontFamily="@font/montserrat"
+        android:hint="Total Guest"
+        android:padding="@dimen/_10sdp"/>
+    <EditText
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hour"
+        android:hint="Hours"
+        android:fontFamily="@font/montserrat"
+        android:padding="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_blue"
+        android:text="Submit"/>
+
+</LinearLayout>

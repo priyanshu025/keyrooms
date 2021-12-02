@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="#f2f2f2"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+
+        />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/gelasio_semibold"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/grey_background"
+        android:textSize="@dimen/_9sdp" />
+    <TextView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/gelasio_semibold"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/grey_background"
+        android:textSize="@dimen/_9sdp" />
+    <TextView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/gelasio_semibold"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/grey_background"
+        android:textSize="@dimen/_9sdp" />
+
+
+
+</LinearLayout>
